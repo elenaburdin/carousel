@@ -1,0 +1,50 @@
+body {
+    background-color: #234;
+}
+
+.carousel {
+    /* border: 20px solid white; */
+    width: 500px;
+    height: 700px;
+    margin-top: 250px;
+    margin-left: 50px;
+
+    /* new - perspective */
+    perspective: 1000px;
+    
+}
+
+.carousel > div {
+    /* border: 3px solid green; */
+    width: 500px;
+    height: 0;
+
+    transition: 1s;
+}
+
+.carousel > div:nth-child(3) {
+    transform: rotateY(0deg);
+    transform-origin: left;
+}
+
+.carousel > div:nth-child(2) {
+    transform: rotateY(0deg);
+    transform-origin: left;
+
+    /* new - filter */
+    filter: brightness(70%);
+}
+
+.carousel > div:nth-child(1) {
+    transform: rotateY(0deg);
+    filter: brightness(50%);
+}
+
+.carousel:hover>div:nth-child(3) {
+    transform: rotateY(-60deg);
+}
+
+.carousel:hover>div:nth-child(2) {
+    transform: rotateY(-45deg);
+}
+
